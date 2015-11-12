@@ -1,6 +1,6 @@
 'use strict';
 
-var api;
+var api = {};
 
 api.merge = function merge() {};
 
