@@ -15,6 +15,7 @@
   "keywords": [],
   "repository": "carlosvillademor/poc",
   "devDependencies": {
+    "chai": "2.1.0",
     "gulp": "^3.6.0",
     "gulp-eslint": "^1.0.0",
     "gulp-exclude-gitignore": "^1.0.0",

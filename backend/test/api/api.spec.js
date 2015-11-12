@@ -1,10 +1,10 @@
 'use strict';
 
-var assert = require('assert');
+var expect = require('chai').expect;
 var api = require('../../src/api/api.js');
 
 describe('API', function () {
   it('should have merge end point', function () {
-    assert(api.merge, 'API does not have merge end point');
+    expect(api.merge).to.be.a('function', 'API does not have merge end point');
   });
 });
