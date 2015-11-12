@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert');
-var api = require('../src/api.js');
+var api = require('../../src/api/api.js');
 
 describe('API', function () {
   it('should have merge end point', function () {
