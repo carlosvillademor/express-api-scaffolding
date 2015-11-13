@@ -1,7 +1,10 @@
 'use strict';
 
-var api = {};
+var express = require('express');
+var api = express.Router();
 
-api.merge = function merge() {};
+api.post('/merge', function (req, res) {
+  res.sendStatus(200);
+});
 
 module.exports = api;

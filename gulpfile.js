@@ -28,7 +28,7 @@ gulp.task('integration-tests', function (done) {
   }, done).start();
 });
 
-gulp.task('pre-test', function () {
+gulp.task('pre-test', ['static'], function () {
   return gulp.src('backend/test/**/*.js')
     .pipe(istanbul({
       includeUntested: true
