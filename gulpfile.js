@@ -8,6 +8,7 @@ var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
 var plumber = require('gulp-plumber');
 var coveralls = require('gulp-coveralls');
+var KarmaServer = require('karma').Server;
 
 gulp.task('static', function () {
   return gulp.src('**/*.js')
@@ -19,6 +20,12 @@ gulp.task('static', function () {
 
 gulp.task('nsp', function (cb) {
   nsp({package: path.resolve('package.json')}, cb);
+});
+
+gulp.task('integration-tests', function (done) {
+  new KarmaServer({
+    configFile: __dirname + '/karma.conf.js'
+  }, done).start();
 });
 
 gulp.task('pre-test', function () {
@@ -55,4 +62,4 @@ gulp.task('coveralls', ['test'], function () {
 });
 
 gulp.task('prepublish', ['nsp']);
-gulp.task('default', ['static', 'test', 'coveralls']);
+gulp.task('default', ['static', 'integration-tests', 'test', 'coveralls']);
