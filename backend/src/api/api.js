@@ -3,7 +3,7 @@
 var express = require('express');
 var api = express.Router();
 
-api.post('/merge', function (req, res) {
+api.get('/', function (req, res) {
   res.sendStatus(200);
 });
 

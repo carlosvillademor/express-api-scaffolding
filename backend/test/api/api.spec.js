@@ -1,8 +1,13 @@
 'use strict';
 
-var expect = require('chai').expect;
-var api = require('../../src/api/api.js');
+var request = require('supertest');
+
+request = request('http://localhost:3000');
 
 describe('API', function () {
-
+  it('should return HTTP status code 200 for GET requests to root path', function (done) {
+    request
+      .get('/')
+      .expect(200, done);
+  });
 });
