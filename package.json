@@ -41,7 +41,10 @@
         "npm test"
       ],
       "pre-push": [
-        "prepublish"
+        "rm -rf node_modules",
+        "npm install",
+        "prepublish",
+        "npm test"
       ],
       "post-commit": [
         "git st"
