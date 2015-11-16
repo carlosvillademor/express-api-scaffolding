@@ -8,7 +8,11 @@
     "email": "carlos.villademor@gmail.com"
   },
   "main": "backend/src/server/server.js",
-  "keywords": ["express", "api", "scaffolding"],
+  "keywords": [
+    "express",
+    "api",
+    "scaffolding"
+  ],
   "repository": "carlosvillademor/express-api-scaffolding",
   "devDependencies": {
     "gulp": "^3.6.0",
@@ -19,6 +23,7 @@
     "gulp-mocha": "^2.0.0",
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
+    "pre-git": "^1.2.11",
     "really-need": "^1.7.0",
     "supertest": "^1.1.0"
   },
@@ -29,6 +34,19 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "pre-commit": ["test"],
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "pre-git": {
+      "pre-commit": [
+        "npm test"
+      ],
+      "pre-push": [
+        "prepublish"
+      ],
+      "post-commit": [
+        "git st"
+      ],
+      "post-merge": []
+    }
+  }
 }
