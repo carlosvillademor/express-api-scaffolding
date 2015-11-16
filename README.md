@@ -4,7 +4,7 @@
 
 ## License
 
-MIT © [Carlos Fernandez Garcia]()
+MIT © [Carlos Fernandez Garcia](LICENSE)
 
 
 [travis-image]: https://travis-ci.org/carlosvillademor/express-api-scaffolding.svg?branch=master
