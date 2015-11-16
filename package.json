@@ -1,19 +1,15 @@
 {
-  "name": "poc",
-  "version": "0.0.0",
-  "description": "poc",
-  "homepage": "",
+  "name": "express-api-scaffolding",
+  "version": "0.1.0",
+  "description": "express-api-scaffolding",
+  "homepage": "https://github.com/carlosvillademor/express-api-scaffolding",
   "author": {
     "name": "Carlos Fernandez Garcia",
-    "email": "carlos.villademor@gmail.com",
-    "url": ""
+    "email": "carlos.villademor@gmail.com"
   },
-  "files": [
-    "lib"
-  ],
-  "main": "lib/index.js",
-  "keywords": [],
-  "repository": "carlosvillademor/poc",
+  "main": "backend/src/server/server.js",
+  "keywords": ["express", "api", "scaffolding"],
+  "repository": "carlosvillademor/express-api-scaffolding",
   "devDependencies": {
     "gulp": "^3.6.0",
     "gulp-coveralls": "^0.1.0",
@@ -26,12 +22,13 @@
     "really-need": "^1.7.0",
     "supertest": "^1.1.0"
   },
+  "dependencies": {
+    "express": "^4.13.3"
+  },
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.13.3"
-  }
+  "pre-commit": ["test"],
+  "license": "MIT"
 }
