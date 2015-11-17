@@ -1,6 +1,9 @@
-# express-api-scaffolding 
+# express-api-scaffolding
 [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > express-api-scaffolding
+
+## Changelog convention
+We will follow the convention for git commits described on https://github.com/ajoslin/conventional-changelog/blob/master/conventions/angular.md
 
 ## License
 

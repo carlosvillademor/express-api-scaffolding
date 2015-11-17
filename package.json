@@ -32,11 +32,14 @@
   },
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "gulp",
+    "commit": "commit-wizard"
   },
   "license": "MIT",
   "config": {
     "pre-git": {
+      "commit-msg": "validate-commit-msg",
+      "commitizen": "node_modules/pre-git/node_modules/cz-conventional-changelog",
       "pre-commit": [
         "npm test"
       ],
