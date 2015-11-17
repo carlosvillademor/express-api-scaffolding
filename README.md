@@ -1,5 +1,6 @@
 # express-api-scaffolding
-[![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+[![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url][![Commitizen friendly][commitizen-image]][commitizen-url]
+
 > express-api-scaffolding
 
 ## Changelog convention
@@ -16,3 +17,5 @@ MIT © [Carlos Fernandez Garcia](LICENSE)
 [daviddm-url]: https://david-dm.org/carlosvillademor/express-api-scaffolding
 [coveralls-image]: https://coveralls.io/repos/carlosvillademor/express-api-scaffolding/badge.svg
 [coveralls-url]: https://coveralls.io/r/carlosvillademor/express-api-scaffolding
+[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
+[commitizen-url]: http://commitizen.github.io/cz-cli/
