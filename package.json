@@ -46,7 +46,6 @@
       "pre-push": [
         "rm -rf node_modules",
         "npm install",
-        "prepublish",
         "npm test"
       ],
       "post-commit": [
