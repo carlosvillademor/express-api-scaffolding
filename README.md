@@ -4,7 +4,7 @@
 > express-api-scaffolding
 
 ## Changelog convention
-We will follow the convention for git commits described on https://github.com/ajoslin/conventional-changelog/blob/master/conventions/angular.md
+We will follow the convention for git commits described on https://github.com/ajoslin/conventional-changelog/blob/master/conventions/angular.md, using [cz-conventional-changelog](https://www.npmjs.com/package/cz-conventional-changelog) for [commitizen](https://www.npmjs.com/package/commitizen) via [pre-git](https://www.npmjs.com/package/pre-git)
 
 ## License
 
