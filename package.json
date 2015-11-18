@@ -7,13 +7,15 @@
     "name": "Carlos Fernandez Garcia",
     "email": "carlos.villademor@gmail.com"
   },
-  "main": "backend/src/server/server.js",
   "keywords": [
     "express",
     "api",
     "scaffolding"
   ],
-  "repository": "carlosvillademor/express-api-scaffolding",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/carlosvillademor/express-api-scaffolding.git"
+  },
   "devDependencies": {
     "gulp": "^3.6.0",
     "gulp-coveralls": "^0.1.0",
@@ -31,9 +33,10 @@
     "express": "^4.13.3"
   },
   "scripts": {
+    "commit": "commit-wizard",
     "prepublish": "gulp prepublish",
     "test": "gulp",
-    "commit": "commit-wizard"
+    "start": "node backend/src/server/server.js"
   },
   "license": "MIT",
   "config": {
