@@ -8,6 +8,7 @@ var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
 var plumber = require('gulp-plumber');
 var coveralls = require('gulp-coveralls');
+var nodemon = require('gulp-nodemon');
 
 gulp.task('static', function () {
   return gulp.src('**/*.js')
@@ -21,7 +22,7 @@ gulp.task('nsp', function (cb) {
   nsp({package: path.resolve('package.json')}, cb);
 });
 
-gulp.task('pre-test', ['static'], function () {
+gulp.task('coverage', ['static'], function () {
   return gulp.src('backend/test/**/*.js')
     .pipe(istanbul({
       includeUntested: true
@@ -29,7 +30,7 @@ gulp.task('pre-test', ['static'], function () {
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('test', ['pre-test'], function (cb) {
+gulp.task('test', function (cb) {
   var mochaErr;
 
   gulp.src('backend/test/**/*.spec.js')
@@ -54,5 +55,22 @@ gulp.task('coveralls', ['test'], function () {
     .pipe(coveralls());
 });
 
+gulp.task('dev-server', function () {
+  nodemon({
+    script: 'backend/src/server/server.js',
+    ext: 'js',
+    env: { NODE_ENV: 'development' },
+    verbose: true,
+    watch: [
+      'backend/src/',
+      'backend/test/'
+    ],
+    events: {
+      restart: 'osascript -e "display notification "App restarted due to:\n\'$FILENAME\' with title "nodemon"'
+    }
+  });
+});
+
 gulp.task('prepublish', ['nsp']);
-gulp.task('default', ['static', 'test', 'coveralls']);
+gulp.task('default', ['static', 'test', 'coverage', 'coveralls']);
+gulp.task('dev', ['dev-server']);

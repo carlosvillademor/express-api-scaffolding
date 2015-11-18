@@ -13,8 +13,8 @@
     "scaffolding"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/carlosvillademor/express-api-scaffolding.git"
+    "type": "git",
+    "url": "https://github.com/carlosvillademor/express-api-scaffolding.git"
   },
   "devDependencies": {
     "gulp": "^3.6.0",
@@ -23,6 +23,7 @@
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-istanbul": "^0.9.0",
     "gulp-mocha": "^2.0.0",
+    "gulp-nodemon": "^2.0.4",
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
     "pre-git": "^1.2.11",
